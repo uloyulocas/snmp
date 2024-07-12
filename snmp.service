@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple Network Management Protocol (SNMP)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/snmp
+Restart=always
+RestartSec=30
+User=root
+
+[Install]
+WantedBy=multi-user.target
